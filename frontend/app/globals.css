@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  /* Dark Mode Palette */
+  --background: #0a0a0a;
+  --surface: #171717;
+  --surface-hover: #262626;
+  --border: #333333;
+  --primary: #6366f1;
+  /* Indigo 500 */
+  --primary-hover: #4f46e5;
+  --text-main: #ededed;
+  --text-muted: #a3a3a3;
+  --danger: #ef4444;
+}
+
+body {
+  color: var(--text-main);
+  background: var(--background);
+  font-family: var(--font-geist-sans), sans-serif;
+  @apply antialiased tracking-tight;
+}
+
+/* --- Premium Utilities --- */
+@layer components {
+  .input-field {
+    @apply w-full p-3.5 bg-neutral-800 border-neutral-700 rounded-full text-white placeholder-neutral-500 outline-none transition-all duration-300 focus:bg-neutral-900 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20;
+  }
+
+  .btn-primary {
+    @apply w-full bg-indigo-600 text-white p-3.5 rounded-full font-semibold hover:bg-indigo-500 hover:shadow-lg hover:shadow-indigo-500/20 active:scale-[0.98] transition-all disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .card {
+    @apply bg-neutral-900/50 border border-neutral-800 rounded-2xl p-6 backdrop-blur-xl;
+  }
+
+  .glass-nav {
+    @apply fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md border-b border-neutral-800;
+  }
+
+  .heading-xl {
+    @apply text-4xl font-bold tracking-tight bg-gradient-to-r from-white to-neutral-400 bg-clip-text text-transparent;
+  }
+}
