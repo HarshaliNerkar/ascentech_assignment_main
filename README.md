@@ -45,7 +45,7 @@ cd frontend
 npm install
 npm run dev
 ```
-The frontend runs on `http://10.245.42.210:3001/`.
+The frontend runs on `(http://localhost:3000/login)`.
 
 ---
 **Created by Harshali Nerkar**
